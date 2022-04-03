@@ -1,0 +1,81 @@
+header, nav, main {
+    min-width: 35rem;
+    margin: auto;
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+
+
+#navWrapper {
+nav {
+
+    button {display: none;}
+    #primaryNav {display: flex;}
+
+    ul, ul.open {
+        margin-left: 2%;
+        border-left: 1px solid #333;
+        
+    } //end of ul
+
+    ul li {
+        border-right: 1px solid #333;
+    } 
+    
+    ul li a {
+        border: none;
+        font-size: 1rem;
+        padding: .9rem 1.2rem;
+        color: white;
+        text-decoration: none;
+
+    }
+
+    ul li a:hover {
+        background: darken($menuColor, 5%);
+    }
+
+    ul.open {
+        display: none;
+    }
+} // end nav
+
+} //end of navWrapper
+
+
+// main stuff goes here
+
+main div.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    span {
+        display: block;
+        text-align: center;
+        font-size: .75rem;
+    }
+
+
+
+.teaser, .lead {padding: .5rem 2vw;}
+
+.teaser img, .lead img {width: 100%}
+
+.lead {grid-column: 1 / span 3;}
+
+
+} //end of parent div
+
+
+
+//footer stuff here
+
+footer .footerParent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    .teaser, .lead {padding: .5rem 2vw;}
+
+    }
