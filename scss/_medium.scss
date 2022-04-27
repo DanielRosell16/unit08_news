@@ -7,32 +7,40 @@ header, nav, main {
 
 
 #navWrapper {
+
 nav {
 
     button {display: none;}
-    #primaryNav {display: flex;}
+    #primaryNav {
+        display: flex; 
+        justify-content: right;
+        border-top: 1px solid #333;
+
+
+    }
 
     ul, ul.open {
         margin-left: 2%;
-        border-left: 1px solid #333;
         
     } //end of ul
 
-    ul li {
-        border-right: 1px solid #333;
-    } 
+  
     
     ul li a {
+        display: flex;
+        justify-items: right;
         border: none;
         font-size: 1rem;
         padding: .9rem 1.2rem;
-        color: white;
+        color: $secondaryColor;
         text-decoration: none;
+
 
     }
 
     ul li a:hover {
-        background: darken($menuColor, 5%);
+        background: darken($secondaryColor, .2);
+        color: $primaryColor;
     }
 
     ul.open {
@@ -45,14 +53,16 @@ nav {
 
 // main stuff goes here
 
+
+
 main div.parent {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
 
     span {
         display: block;
-        text-align: center;
+        text-align: left;
         font-size: .75rem;
     }
 
@@ -62,10 +72,30 @@ main div.parent {
 
 .teaser img, .lead img {width: 100%}
 
-.lead {grid-column: 1 / span 3;}
+.lead {grid-column: 1 / span 4;}
+
 
 
 } //end of parent div
+
+div.iconSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+div#growthSection{
+    grid-template-columns: 1fr, 1fr, 1fr; 
+    width: 100%;
+    .topright{
+        grid-row: 1 / span 2;
+    }
+    .bottomleft{
+        grid-column: 2 span / 1;
+        width: 100%;
+    }
+}
 
 
 

@@ -26,29 +26,51 @@ header {
         padding-left: .5rem;
         color: $primaryColor;
     }
+
+  
 } // end header
+
+div#headerWrapper {
+    display: flex;
+	padding: .5rem 2vw;
+    align-items: center;
+    color: $primaryColor;
+
+    h2 {
+        color: rgba($primaryColor, .2);
+    }
+}
+
 
 /* NAVIGATION STUFF GOES HERE  */
 
 #navWrapper {
-    background-color: $menuColor;
+
+    primaryNav li {
+        i {
+            display: none;
+        }
+    }
+
     ul {
         display: none;
         margin: 0;
         padding: 0;
     } //end of ul
 
-    ul li.active a{background-color: rgba(0,0,0,0.25%);}
+    ul li.active a{background-color: rgba($secondaryColor, 0.5);}
 
     ul li a {
         display: block;
         padding: .75rem 2vw;
         font-size: 1.1rem;
-        color: white;
+        color: $secondaryColor;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+
     }
 
     ul li a:hover {
-        background-color: rgba(0,0,0, 0.5);
+        background-color: rgba($primaryColor, 0.5);
     }
 
     ul.open {
@@ -69,7 +91,7 @@ nav button {
             height: 2px;
             width: 60%;
             left: 20%;
-            background-color: white;
+            background-color: $secondaryColor;
             transition: all .3s ease;
         } //end of line
         .top {top: 29%;}
@@ -90,30 +112,93 @@ nav button {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+nav ul li i {
+    padding-right: 10px;
+    font-size: 20px;
+    text-align: center;
+}
 
 
 
 /* MAIN  */
 main {
+    h2 {
+        padding: .5rem 2vw;
+        color: $primaryColor;
+    }
+    div.lead img {
+        padding: .5rem 2vw;
+        width: 100%;
+    }
+
+    div#parent1 {
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+        padding: .5rem 2vw;
+    }
+
+    div.teaser1 {
+        padding: 5px 0 5px 5px;
+
+        h2 {
+            color: yellow;
+        }
+        
+        p {
+            padding: 5px 0 5px 0;
+            color: white;
+        }
+
+        li {
+            padding-left: 15px;
+            color: white;
+        }
+    }
+    div.teaser2 {
+        text-align: right;
+        padding-right: 10px;
+
+        h2 {
+            font-size: 24px;
+            color: yellow
+        }
+
+        h3 {
+            font-size: 32px;
+            color: yellow;
+        }
+        h4 {
+            padding: 5px;
+            color: white;
+        }
+    }
+
  	p {padding: .5rem 2vw; color: #333;}
 	h1 {
         padding: 1rem 2vw .5rem 2vw; 
         font-size: 1.5rem; 
         color: $secondaryColor;
-        font-weight: $lightWeight
+        font-weight: $lightWeight;
+    }
+
+      main div.heroImg img {
+        width: 100%;
+    }
+
+
+    div#lastParent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+
+        .lastTeaser {grid-column: 3 / span 1;}
+        .lastTeaser, .lastParent {padding: .5rem 2vw;}
+
+
     }
  
 
@@ -124,11 +209,17 @@ main div.parent {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    
+
+    h2 {
+        color: $primaryColor;
+    }
 
     span {
         display: block;
-        text-align: center;
-        font-size: .75rem;
+        text-align: left;
+        font-size: .5rem;
+        padding: 5px 0;
     }
 
 
@@ -143,26 +234,60 @@ main div.parent {
 } //end of parent div
 
 
+div.iconSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+
+div#growthSection{
+    margin: 0;
+    background-image: url('../images/Glow.jpg');
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 50%, 50%;
+    grid-template-rows: auto;
+    
+
+    .topleft, .topright, .bottomleft {
+        padding: .5rem;
+    }
+
+    .topleft img, .topright img{
+        width: 100%;
+    }
+
+    .topright, .bottomleft {
+        grid-column: 1 / span 1;
+    }
+}
+
+
+div section{
+    color: $primaryColor;
+    font-size: 35px;
+}
+
+div#growthSection div p {
+    color: $secondaryColor;
+    font-size: 17px;
+}
+
+
 
 
 
 
 
 /* FOOTER  */
-#footerWrapper {background-color: $menuColor;}
+#footerWrapper {background-color: $primaryColor;}
 footer {
     font-size: 1rem;
 	padding: 1rem 0;
-	color: #bbb;
-	text-align: center;
-	a{color: #eee;}
+	padding: .5rem 2vw;
+	color: white;
+	text-align: left;
 }
 
-footer .footerParent {
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: auto;
-
-.teaser, .lead {padding: .5rem 2vw;}
-
-}

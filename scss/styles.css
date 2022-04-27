@@ -133,6 +133,9 @@ header h1 {
   padding-left: 0.5rem;
   color: #cc7a26;
 }
+header div#headerWrapper {
+  display: flex;
+}
 
 /* NAVIGATION STUFF GOES HERE  */
 #navWrapper {
@@ -204,6 +207,15 @@ main h1 {
   color: #265b7d;
   font-weight: 300;
 }
+main main picture.heroImage {
+  display: block;
+  width: 96%;
+  margin: 0 2%;
+}
+main main picture.heroImg img {
+  background-color: red;
+  width: 100%;
+}
 
 main div.parent {
   display: grid;
@@ -236,18 +248,6 @@ footer {
   color: #bbb;
   text-align: center;
 }
-footer a {
-  color: #eee;
-}
-
-footer .footerParent {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-}
-footer .footerParent .teaser, footer .footerParent .lead {
-  padding: 0.5rem 2vw;
-}
 
 @media only screen and (min-width: 35rem) {
   header, nav, main {
@@ -270,6 +270,8 @@ footer .footerParent .teaser, footer .footerParent .lead {
     border-right: 1px solid #333;
   }
   #navWrapper nav ul li a {
+    display: flex;
+    justify-items: rightd;
     border: none;
     font-size: 1rem;
     padding: 0.9rem 1.2rem;
